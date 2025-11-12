@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-//custom variables use instead like this, background-color: var(--primary);
+<!-- custom variables use instead like this, background-color: var(--primary);-->
 :root {
     --primary: #8da2cf;
     --accent: #bdabe5;
@@ -15,10 +15,10 @@
     --gradient-card: linear-gradient(160deg, rgba(190, 177, 216, 0.2), rgba(164, 188, 240, 0.4));
     --shadow-soft: 0 30px 60px -40px rgba(27, 31, 59, 0.35);
     --shadow-floating: 0 24px 80px -40px rgba(27, 31, 59, 0.45);
-    --radius-large: 28px; //rounded corners
+    --radius-large: 28px; <!-- rounded corners -->
     --radius-medium: 18px;
     --radius-small: 12px;
-    --transition: 240ms cubic-bezier(0.22, 1, 0.36, 1); // animation timing
+    --transition: 240ms cubic-bezier(0.22, 1, 0.36, 1); <!--  animation timing -->
     --max-width: 1100px;
 }
 
@@ -29,3 +29,77 @@ header.image {
     background-size: cover;
     background-position: center;
 }
+<!-- background I  want to add picture behind later-->
+.booking-page { 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(17, 9, 36, 0.78) 0%, rgba(17, 9, 36, 0.6) 45%, rgba(17, 9, 36, 0.25) 100%), url('../Images/festival-bg.jpg') center / cover no-repeat fixed;
+}
+.page-wrapper {
+    flex: 1;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    backdrop-filter: blur(2px);
+}
+<!-- header navigation-->
+.booking-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem clamp(2rem, 6vw, 5rem) 1.5rem;
+}
+<!-- top banner-->
+.booking-hero {
+    background: var(--gradient-hero);
+    color: rgba(27, 31, 59, 0.95);
+    border-radius: var(--radius-large);
+    padding: clamp(2.75rem, 8vw, 4.5rem);
+    box-shadow: var(--shadow-floating);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+}
+<!-- overlay-->
+.booking-hero::after {
+    content: '';
+    position: absolute; <!-- circle placement -->
+    inset: 10%; <!-- circle placement-->
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
+    opacity: 0.4;
+    z-index: 0; <!-- stays behind -->
+}
+
+.booking-hero__content {
+    position: relative;
+    z-index: 1; <!-- above overlay -->
+    max-width: 520px;
+    display: grid;
+    gap: 1rem;
+}
+<!-- name and date above-->
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+<!--main heading--> 
+.booking-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0;
+    line-height: 1.1;
+}
+<!--text under heading-->
+.lead {
+    font-size: 1.05rem;
+    color: rgba(27, 31, 59, 0.78);
+    margin: 0 0 1rem;
+}
+
