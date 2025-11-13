@@ -53,6 +53,7 @@ header.image {
     justify-content: space-between;
     padding: 2.5rem clamp(2rem, 6vw, 5rem) 1.5rem;
 }
+
 <!-- top banner-->
 .booking-hero {
     background: var(--gradient-hero);
@@ -104,6 +105,9 @@ header.image {
 }
 body{
     margin: 0;
-    font-family: 'Inter',
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
 }
 
