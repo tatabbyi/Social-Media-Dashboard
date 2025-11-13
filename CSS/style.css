@@ -102,4 +102,8 @@ header.image {
     color: rgba(27, 31, 59, 0.78);
     margin: 0 0 1rem;
 }
+body{
+    margin: 0;
+    font-family: 'Inter',
+}
 
