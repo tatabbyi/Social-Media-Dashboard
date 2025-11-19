@@ -15,10 +15,10 @@
     --gradient-card: linear-gradient(160deg, rgba(190, 177, 216, 0.2), rgba(164, 188, 240, 0.4));
     --shadow-soft: 0 30px 60px -40px rgba(27, 31, 59, 0.35);
     --shadow-floating: 0 24px 80px -40px rgba(27, 31, 59, 0.45);
-    --radius-large: 28px; <!-- rounded corners -->
+    --radius-large: 28px; /* rounded corners */
     --radius-medium: 18px;
     --radius-small: 12px;
-    --transition: 240ms cubic-bezier(0.22, 1, 0.36, 1); <!--  animation timing -->
+    --transition: 240ms cubic-bezier(0.22, 1, 0.36, 1); /*  animation timing */
     --max-width: 1100px;
 }
 /* Targets all with box-sizing */
@@ -73,17 +73,17 @@ header.image {
 /* overlay */
 .booking-hero::after {
     content: '';
-    position: absolute; <!-- circle placement -->
-    inset: 10%; <!-- circle placement-->
+    position: absolute; /* circle placement*/
+    inset: 10%; /* circle placement */
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
     opacity: 0.4;
-    z-index: 0; <!-- stays behind -->
+    z-index: 0; /* stays behind */
 }
 
 .booking-hero__content {
     position: relative;
-    z-index: 1; <!-- above overlay -->
+    z-index: 1; /* above overlay */
     max-width: 520px;
     display: grid;
     gap: 1rem;
@@ -241,6 +241,8 @@ body{
     gap: 0.6rem;
     color: var(--color-muted);
 }
+
+
 
 
 
