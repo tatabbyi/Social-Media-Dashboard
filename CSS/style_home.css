@@ -14,28 +14,40 @@
     --gradient-card: linear-gradient(160deg, rgba(190, 177, 216, 0.2), rgba(164, 188, 240, 0.4));
     --shadow-soft: 0 30px 60px -40px rgba(27, 31, 59, 0.35);
     --shadow-floating: 0 24px 80px -40px rgba(27, 31, 59, 0.45);
-    --radius-large: 28px; <!-- rounded corners -->
+    --radius-large: 28px; /* rounded corners */
     --radius-medium: 18px;
     --radius-small: 12px;
-    --transition: 240ms cubic-bezier(0.22, 1, 0.36, 1); <!--  animation timing -->
+    --transition: 240ms cubic-bezier(0.22, 1, 0.36, 1); /*  animation timing */
     --max-width: 1100px;
 }
 
 
-/* main page */
+/* bubble for the text */
 .bubble-card {
     background-image: url('../HTML/Images/back_main.jpg');
     border-radius: var(--radius-large);
     padding: 3rem 3.5rem;          /* BIGGER bubble */
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.45);
     max-width: 1000px;             /* WIDER bubble */
     margin: 0 auto;
     text-align: center;
 }
 
-.bubble-card p {
+.bubble-card h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    line-height: 1.85;             /* nicer spacing */
+    color: hsl(0, 0%, 100%);
+    margin: 0 auto;
+    max-width: 900px;              /* keeps lines neat */
+    text-shadow:
+        0 3px 4px rgba(0, 0, 0, 0.55),
+        0 6px 12px rgba(0, 0, 0, 0.45);
+
+}
+
+.bubble-card p{
     font-family: 'Inter', sans-serif;
     font-size: 1.35rem;            /* BIGGER text */
     font-weight: bolder;
@@ -58,6 +70,7 @@
     width: 800px;             /* adjust size */
     height: auto;
     margin: 0 auto 1.5rem;    /* centers the wrapper */
+    transition: transform 0.3s ease;  /* optional wrapper animation */
 }
 
 .festival-logo-wrapper::before {
@@ -72,6 +85,7 @@
     border-radius: 50%;
     filter: blur(20px);       /* creates glow */
     z-index: -1;              /* behind the image */
+    transition: filter 0.3s ease;  /* glow reacts smoothly */
 }
 
 .festival-logo {
@@ -79,5 +93,89 @@
     width: 800px;
     height: auto;
     margin: 0 auto;
+    transition: transform 0.3s ease, filter 0.3s ease; /* smooth hover animation */
+}
+
+.festival-logo:hover {              /* Hover effect for logo */
+    transform: translateY(-15px);   /* moves logo up on hover */
+}
+
+.festival-logo-wrapper:hover::before {
+    filter: blur(25px);   /* optional: glow becomes stronger on hover */
+}
+
+
+
+/* Social Media Libk */
+.social-link-wrapper {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.social-link-wrapper a {
+    display: block;       /* ⬅ FIX: makes icon appear above the text */
+}
+
+.social-icon {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.2);
+}
+
+.social-text {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+
+
+/* Image Gallery */
+.gallery-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1rem 0; /* new: slight padding so images never get cut off */
+}
+
+.gallery-container img {
+  --brightness: 0.7;
+  --grayscale: 1;
+  flex: 1;
+  height: 250px;       /* moved height here instead */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 
+    flex 0.5s ease,
+    filter 0.5s ease;
+  filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+}
+
+.gallery-container img:hover {
+  --brightness: 1.2;
+  --grayscale: 0;
+  flex: 4;
+}
+
+.gallery-text{
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    line-height: 1.85;             /* nicer spacing */
+    color: hsl(0, 0%, 100%);
+    margin: 0 auto;
+    max-width: 900px;              /* keeps lines neat */
+    text-shadow:
+        0 3px 4px rgba(0, 0, 0, 0.55),
+        0 6px 12px rgba(0, 0, 0, 0.45); 
 }
 
