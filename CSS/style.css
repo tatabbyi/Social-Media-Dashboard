@@ -58,6 +58,7 @@ header.image {
     align-items: center;
     justify-content: space-between;
     padding: 2.5rem clamp(2rem, 6vw, 5rem) 1.5rem;
+    
 }
 /* top banner */
 .booking-hero {
