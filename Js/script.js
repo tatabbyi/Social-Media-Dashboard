@@ -2,6 +2,7 @@
     const openBookingButton = document.getElementById('open-booking');
     const bookingDialog = document.getElementById('booking-dialog');
     const dialogCloseButton = bookingDialog ? bookingDialog.querySelector('.dialog-close') : null;
+    const backdrop = document.querySelector('.backdrop');
 
     function openDialog(){
         if(!bookingDialog) return;
@@ -27,5 +28,9 @@
 
     if(dialogCloseButton){
         dialogCloseButton.addEventListener('click', closeDialog);
+    }
+
+    if (backdrop) {
+        backdrop.addEventListener('click', closeDialog);
     }
 })();
