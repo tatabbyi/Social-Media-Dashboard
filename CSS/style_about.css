@@ -35,47 +35,43 @@ header.image {
 }
 
 /* Making the class card bubbles*/
-.bubble-card {
-    
-    
+.dubai, .brazil, .belgium {
+    /* Card container styles */
     border-radius: var(--radius-large);
-    padding: 3rem 3.5rem;          /* BIGGER bubble */
+    padding: 3rem 3.5rem;          /* space inside card */
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    max-width: 1000px;             /* WIDER bubble */
-    margin: 0 auto;
+    border: 1px solid rgba(238, 54, 54, 0.75);
+    max-width: 400px;             
+    margin: 2rem auto;             
     text-align: center;
 }
 
-.bubble-card p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.35rem;            /* BIGGER text */
-    font-weight: bolder;
-    line-height: 1.85;             /* nicer spacing */
-    color: hsl(0, 0%, 100%);
-    margin: 0 auto;
-    max-width: 900px;              /* keeps lines neat */
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-
+/*making it line up side by side*/
+.card-row{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem auto;
+    flex-wrap: wrap;
 }
+
 
 .festival-info{
     width:80%;
     margin: 2rem auto;
     border-collapse: collapse;
-    background: rgba(247, 197, 242, 0.75);
     backdrop-filter: blur(6px);
 }
 
 .festival-info th,
 .festive-info td{
     padding: 1rem;
-    border: 1px solid rgba(247, 197, 242, 0.75)
+    border: 1px blur rgba(238, 54, 54, 0.75)
 }
 
 .festival-info th{
-    border: 1px solid rgba(247, 197, 242, 0.75);
-    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    border: 1px solid rgba(238, 54, 54, 0.75);
     font-weight: 700;
 }
