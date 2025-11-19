@@ -35,30 +35,26 @@ header.image {
 }
 
 /* Making the class card bubbles*/
-.bubble-card {
-    
-    
+.dubai, .brazil, .belgium {
+    /* Card container styles */
     border-radius: var(--radius-large);
-    padding: 3rem 3.5rem;          /* BIGGER bubble */
+    padding: 3rem 3.5rem;          /* space inside card */
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    max-width: 1000px;             /* WIDER bubble */
-    margin: 0 auto;
+    border: 1px solid rgba(247, 197, 242, 0.75);
+    max-width: 1000px;             /* width of card */
+    margin: 2rem auto;             /* centers card with spacing */
     text-align: center;
-}
 
-.bubble-card p {
+    /* Text styles */
     font-family: 'Inter', sans-serif;
-    font-size: 1.35rem;            /* BIGGER text */
+    font-size: 1.35rem;
     font-weight: bolder;
-    line-height: 1.85;             /* nicer spacing */
-    color: hsl(0, 0%, 100%);
-    margin: 0 auto;
-    max-width: 900px;              /* keeps lines neat */
+    line-height: 1.85;
+    color: rgba(247, 197, 242, 0.75);
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-
 }
+
 
 .festival-info{
     width:80%;
