@@ -1,28 +1,45 @@
-# Event-Website
-Collaborative Group Project. Simple Event Website for TomorrowLand.
-
-# Chosen Event and Info
-Tomorrowland - https://www.tomorrowland.com/
-Tomorrowland is a large-scale annual electronic dance music festival held in Boom, Antwerp, Belgium. Taking place within De Schorre provincial recreational park, it held its first edition in 2005, from an idea conceived by brothers Manu and Michiel Beers in 2004.
 
 
-# Work Allocation
-Main Page -Diana
-About Page - Megan
-Shop Page - Lizzie
-Booking Page - Rachel
+# Event Website – Tomorrowland
 
-# Resources used 
-Accessibility - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
-General - https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Cheatsheet
-Pseudo Elements - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements
-Borders(whole section) -https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator
+*A collaborative group project*
+
+## Chosen Event
+
+**Tomorrowland**
+Website: [https://www.tomorrowland.com/](https://www.tomorrowland.com/)
+
+Tomorrowland is a large-scale annual electronic dance music festival held in Boom, Antwerp, Belgium. Taking place within the De Schorre provincial recreational park, it held its first edition in 2005, based on an idea conceived by brothers Manu and Michiel Beers in 2004.
+
+---
+
+## Work Allocation
+
+* **Main Page** – Diana
+* **About Page** – Megan
+* **Shop Page** – Lizzie
+* **Booking Page** – Rachel
+
+---
+
+## Resources Used
+
+* Accessibility: [https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
+* General HTML Reference: [https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Cheatsheet](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Cheatsheet)
+* Pseudo Elements: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+* Borders / Section Styling: [https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+
+---
+
+## Project Summary and Timeline
+
+* **30th October** – 2 hours of planning. Created design mockups and discussed ideas for the original Social Media Dashboard concept.
+* **3rd November** – Library meetup (5–7 PM). Set up GitHub for the group and changed project idea to an Event Website after further research.
+* **4th November** – Tomorrowland selected as the event theme.
+* **5th November** – Set up general background, finalised colour scheme, and established design so each member could begin work on their assigned page.
+* **11th November** – Group meeting to plan content for each page. Assigned tasks such as adding images, videos, tables, and lists.
+
+---
 
 
-# Summary of Project and Timeline
-- 30th October 2 hrs of planning. Created images of design plans and talked about ideas for the Social Media Dashboard.
-- 3rd November Library Meetup 5-7, Setting up GitHub for everyone and changing Idea to Event Website upon further research.
-- 4th November Tomorrowland decided as the  basis for the website.
-- 5th November General Background setup and decided on colour scheme and design so that individual work can be started on each designated page.
-- 11th November meeting and plan for what info to add to each section. Designation of tasks such as adding images, videos, tables and lists.
   
