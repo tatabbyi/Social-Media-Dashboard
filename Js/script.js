@@ -42,6 +42,12 @@
     if (backdrop) {
         backdrop.addEventListener('click', closeDialog);
     }
+    if(ticketTypeSelect) {
+        ticketTypeSelect.addEventListener('change', () => {
+            activeTicketType = ticketTypeSelect ? ticketTypeSelect.value : 'Weekend-pass';
+            updateSummary(); 
+        });
+    }
 const ticketTypes = {
     'Day-Pass': { label: 'Day Pass', price: 75 },
     'Weekend-Pass': { label: 'Weekend Pass', price: 200 },
@@ -50,4 +56,5 @@ const ticketTypes = {
 };
 let active Index = 0;
 let activeTicketType = ticketTypeSelect ? ticketTypeSelect.value : 'Weekend-pass'; 
+
 })();
