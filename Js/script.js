@@ -16,7 +16,6 @@
     const ticketStep = wheelItems.length > 0 ? 360 / wheelItems.length : 360;
     const prevControl = document.querySelector('.wheel-control--prev');
     const nextControl = document.querySelector('.wheel-control--next');
-    )
 
     function openDialog(){
         if(!bookingDialog) return;
@@ -59,10 +58,10 @@ const ticketTypes = {
     'Full-Madness-Pass': { label: 'Full Madness Pass', price: 500 },
     'Camping-Pass': { label: 'Camping Pass', price: 50 },
 };
-let active Index = 0;
-let activeTicketType = ticketTypeSelect ? ticketTypeSelect.value : 'Weekend-pass'; 
+let activeIndex = 0;
+let activeTicketType = ticketTypeSelect ? ticketTypeSelect.value : 'Weekend-Pass'; 
     function resolveTicketType(value) {
-        return ticketTypes[value] || ticketTypes['weekend-pass'];
+        return ticketTypes[value] || ticketTypes['Weekend-Pass'];
     }
 
     function parseQuantity() {
@@ -145,6 +144,23 @@ wheelItems.forEach((item, index) => {
 window.addEventListener('resize', () => {
     positionWheelItems();
 });
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (!emailInput || !emailInput.value) {
+            if (emailInput) emailInput.focus();
+            return;
+        }
+            const holdingMessage = 'Online payments open soon. We will email you a checkout link as soon as possible.';
+            if (paymentStatus) {
+                paymentStatus.textContent = holdingMessage;
+            } else {
+                alert(holdingMessage);
+        }
+    });
+}
+setActiveTicket(activeIndex);
+updateSummary();
 
 
 })();
