@@ -107,4 +107,40 @@ let activeTicketType = ticketTypeSelect ? ticketTypeSelect.value : 'Weekend-pass
 
     if (prevControl) prevControl.addEventListener('click', () => stepWheel(-1));
     if (nextControl) nextControl.addEventListener('click', () => stepWheel(1));
+    function setActiveTicket(index) {
+    if (!wheelItems[index]) return;
+    wheelItems.forEach((item, idx) => {
+        const isActive = idx === index;
+        item.classList.toggle('is-active', isActive);
+        item.setAttribute('aria-checked', String(isActive));
+        item.setAttribute('tabindex', isActive ? '0' : '-1');
+    });
+    activeIndex = index;
+    const dataQuantity = wheelItems[activeIndex].getAttribute('data-quantity');
+    const quantity = parseInt(dataQuantity ? dataQuantity : '1', 10);
+    if (selectedTicketCount) {
+        selectedTicketCount.textContent = String(quantity);
+    }
+    updateSummary();
+    positionWheelItems();
+}
+
+wheelItems.forEach((item, index) => {
+    item.addEventListener('click', () => setActiveTicket(index));
+    item.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            setActiveTicket(index);
+        }
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            stepWheel(-1);
+        }
+        if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            stepWheel(1);
+        }
+    });
+});
+
 })();
