@@ -28,6 +28,8 @@ Tomorrowland is a large-scale annual electronic dance music festival held in Boo
 * General HTML Reference: [https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Cheatsheet](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Cheatsheet)
 * Pseudo Elements: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 * Borders / Section Styling: [https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+* Wheel positioning Function: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model  , https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector , https://css-tricks.com/almanac/properties/t/transform/
+
 
 ---
 
