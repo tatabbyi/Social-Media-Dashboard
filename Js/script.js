@@ -56,5 +56,28 @@ const ticketTypes = {
 };
 let active Index = 0;
 let activeTicketType = ticketTypeSelect ? ticketTypeSelect.value : 'Weekend-pass'; 
+    function resolveTicketType(value) {
+        return ticketTypes[value] || ticketTypes['weekend-pass'];
+    }
 
+    function parseQuantity() {
+        const quantityText = selectedTicketCount ? selectedTicketCount.textContent : '1';
+        const parsed = parseInt(quantityText ? quantityText : '1', 10);
+        return isNaN(parsed) ? 1 : parsed;
+    }
+    function updateSummary() {
+    const ticketConfig = resolveTicketType(activeTicketType);
+    const quantity = parseQuantity();
+    const total = quantity * ticketConfig.price;
+    if (selectedTicketTypeLabel) {
+        selectedTicketTypeLabel.textContent = ticketConfig.label;
+    }
+    if (previewTicketType) {
+        previewTicketType.textContent = ticketConfig.label;
+    }
+    if (totalDisplay) {
+        totalDisplay.textContent = '€' + total.toLocaleString('en-GB');
+    }
+}
+    
 })();
