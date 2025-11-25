@@ -142,5 +142,9 @@ wheelItems.forEach((item, index) => {
         }
     });
 });
+window.addEventListener('resize', () => {
+    positionWheelItems();
+});
+
 
 })();
