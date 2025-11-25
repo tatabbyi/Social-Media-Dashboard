@@ -11,6 +11,9 @@
     const previewTicketType = document.getElementById('preview-ticket-type');
     const paymentStatus = document.getElementById('payment-status');
     const ticketTypeSelect = document.getElementById('ticket-type');
+    const wheel = document.querySelector('.ticket-wheel__items');
+    const wheelItems = wheel ? Array.prototype.slice.call(wheel.querySelectorAll('.ticket-wheel__item')) : [];
+    const ticketStep = wheelItems.length > 0 ? 360 / wheelItems.length : 360;
     )
 
     function openDialog(){
@@ -79,5 +82,19 @@ let activeTicketType = ticketTypeSelect ? ticketTypeSelect.value : 'Weekend-pass
         totalDisplay.textContent = '€' + total.toLocaleString('en-GB');
     }
 }
-    
+    function positionWheelItems() {
+    if (!wheel) return;
+    const radius = wheel.offsetWidth / 2 - 45;
+    wheelItems.forEach((item, index) => {
+        const offsetIndex = ((index - activeIndex) + wheelItems.length) % wheelItems.length;
+        const angleDegrees = offsetIndex * ticketStep - 90;
+        const angleRadians = (angleDegrees * Math.PI) / 180;
+        const x = Math.cos(angleRadians) * radius;
+        const y = Math.sin(angleRadians) * radius;
+        item.style.transform = 'translate(-50%, -50%) translate(' + x + 'px, ' + y + 'px)';
+    });
+}
+    if (wheelItems.length > 0) {
+        positionWheelItems();
+    }
 })();
