@@ -14,6 +14,8 @@
     const wheel = document.querySelector('.ticket-wheel__items');
     const wheelItems = wheel ? Array.prototype.slice.call(wheel.querySelectorAll('.ticket-wheel__item')) : [];
     const ticketStep = wheelItems.length > 0 ? 360 / wheelItems.length : 360;
+    const prevControl = document.querySelector('.wheel-control--prev');
+    const nextControl = document.querySelector('.wheel-control--next');
     )
 
     function openDialog(){
@@ -97,4 +99,12 @@ let activeTicketType = ticketTypeSelect ? ticketTypeSelect.value : 'Weekend-pass
     if (wheelItems.length > 0) {
         positionWheelItems();
     }
+    function stepWheel(direction) {
+    if (wheelItems.length === 0) return;
+    const nextIndex = (activeIndex + direction + wheelItems.length) % wheelItems.length;
+    setActiveTicket(nextIndex);
+}
+
+    if (prevControl) prevControl.addEventListener('click', () => stepWheel(-1));
+    if (nextControl) nextControl.addEventListener('click', () => stepWheel(1));
 })();
