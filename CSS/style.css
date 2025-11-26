@@ -376,7 +376,7 @@ body {
     height: clamp(220px, 40vw, 280px);
     margin: 0 auto;
     list-style: none;
-    ding: 0;
+    padding: 0;
 }
 
 .ticket-wheel__item {
