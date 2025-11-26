@@ -41,10 +41,10 @@ body {
     justify-content: center;
     background: linear-gradient(180deg, rgba(17, 9, 36, 0.78) 0%, rgba(17, 9, 36, 0.6) 45%, rgba(17, 9, 36, 0.25) 100%), url('../Images/festival-bg.jpg') center / cover no-repeat fixed;
 }
+
 .booking-main {
     flex: 1;
 }
-
 
 .page-wrapper {
     flex: 1;
@@ -91,6 +91,10 @@ body {
 .booking-nav a:focus-visible {
     background: rgba(164, 188, 240, 0.32);
     color: #fff;
+}
+
+.booking-main {
+    flex: 1;
 }
 
 .booking-hero {
