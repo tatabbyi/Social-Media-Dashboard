@@ -34,6 +34,19 @@ header.image {
     background-position: center;
 }
 
+.about {
+    background: var(--gradient-hero);
+    color: rgba(27, 31, 59, 0.95);
+    border-radius: var(--radius-large);
+    padding: clamp(2.75rem, 8vw, 4.5rem);
+    box-shadow: var(--shadow-floating);
+    position: relative;
+    overflow: hidden;
+    margin: 0 clamp(2rem, 6vw, 5rem) 3.5rem;
+    width: auto;
+    height: auto;
+}
+
 /* Making the class card bubbles*/
 .dubai, .brazil, .belgium {
     /* Card container styles */
@@ -41,7 +54,7 @@ header.image {
     padding: 3rem 3.5rem;          /* space inside card */
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(238, 54, 54, 0.75);
+    border: 1px solid rgba(5, 1, 1, 0.75);
     max-width: 400px;             
     margin: 2rem auto;             
     text-align: center;
