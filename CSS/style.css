@@ -71,7 +71,7 @@ body {
     overflow: hidden;
     margin-bottom: 3.5rem;
 }
-<!-- overlay-->
+/* overlay*/
 .booking-hero::after {
     content: '';
     position: absolute; /* circle placement */
@@ -89,7 +89,7 @@ body {
     display: grid;
     gap: 1rem;
 }
-<!-- name and date above-->
+/* name and date above*/
 .eyebrow {
     text-transform: uppercase;
     letter-spacing: 0.3em;
@@ -97,7 +97,7 @@ body {
     font-weight: 600;
     margin: 0;
 }
-<!--main heading--> 
+/*main heading*/
 .booking-hero h1 {
     font-size: clamp(2rem, 4vw, 3rem);
     margin: 0;
