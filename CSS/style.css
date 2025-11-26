@@ -204,7 +204,8 @@ body {
 }
 
 .booking-footer {
-    margin-top: auto;
+    position: static !important;
+    margin-top: auto !important;
     padding: 2.5rem clamp(2rem, 6vw, 5rem);
     background: rgba(17, 9, 36, 0.6);
     color: #f4f5ff;
