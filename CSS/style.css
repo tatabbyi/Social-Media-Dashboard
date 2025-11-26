@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-/* custom variables use instead like this, background-color: var(--primary);*/
+/*custom variables use instead like this, background-color: var(--primary);*/
 :root {
     --primary: #8da2cf;
     --accent: #bdabe5;
@@ -22,20 +22,27 @@
     --max-width: 1100px;
 }
 
-header.image {
-    width: 100%;
-    height: 300px;
-    background-image: url("images/HTMLtomorrowland.jpg");
-    background-size: cover;
-    background-position: center;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-<!-- background I  want to add picture behind later-->
-.booking-page { 
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.booking-page {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     background: linear-gradient(180deg, rgba(17, 9, 36, 0.78) 0%, rgba(17, 9, 36, 0.6) 45%, rgba(17, 9, 36, 0.25) 100%), url('../Images/festival-bg.jpg') center / cover no-repeat fixed;
 }
+
 .page-wrapper {
     flex: 1;
     width: 100%;
@@ -64,11 +71,11 @@ header.image {
     overflow: hidden;
     margin-bottom: 3.5rem;
 }
-/*overlay*/
+<!-- overlay-->
 .booking-hero::after {
     content: '';
     position: absolute; /* circle placement */
-    inset: 10%; /*circle placement*/
+    inset: 10%; /* circle placement */
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
     opacity: 0.4;
@@ -77,12 +84,12 @@ header.image {
 
 .booking-hero__content {
     position: relative;
-    z-index: 1; /* above overlay*/
+    z-index: 1; /* above overlay */
     max-width: 520px;
     display: grid;
     gap: 1rem;
 }
-/* name and date above*/
+<!-- name and date above-->
 .eyebrow {
     text-transform: uppercase;
     letter-spacing: 0.3em;
@@ -90,7 +97,7 @@ header.image {
     font-weight: 600;
     margin: 0;
 }
-/*main heading */
+<!--main heading--> 
 .booking-hero h1 {
     font-size: clamp(2rem, 4vw, 3rem);
     margin: 0;
@@ -102,80 +109,7 @@ header.image {
     color: rgba(27, 31, 59, 0.78);
     margin: 0 0 1rem;
 }
-body{
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: var(--color-bg);
-    color: var(--color-text);
-    line-height: 1.6;
-}
-.logo-mark {
-    font-size: 1.35rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(27, 31, 59, 0.75);
-}
-.booking-nav {
-    display: flex;
-    gap: 1.25rem;
-    font-weight: 500;
-}
 
-
-.booking-nav a {
-    text-decoration: none;
-    color: rgba(27, 31, 59, 0.65);
-    padding: 0.45rem 0.75rem;
-    border-radius: var(--radius-small);
-    transition: background var(--transition), color var(--transition);
-}
-
-.booking-nav a[aria-current='page'],
-.booking-nav a:hover,
-.booking-nav a:focus-visible {
-    background: rgba(164, 188, 240, 0.32);
-    color: rgba(27, 31, 59, 0.88);
-}
-.booking-footer {
-    margin-top: auto;
-    padding: 2.5rem clamp(2rem, 6vw, 5rem);
-    background: rgba(17, 9, 36, 0.6);
-    color: #f4f5ff;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    display: grid;
-    gap: 1.5rem;
-}
-
-.footer-contact h2 {
-    margin: 0 0 0.75rem;
-    font-size: 1.05rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.footer-contact p {
-    margin: 0.25rem 0;
-    color: rgba(244, 245, 255, 0.78);
-}
-
-.footer-copy {
-    margin: 0;
-    font-size: 0.9rem;
-    color: rgba(244, 245, 255, 0.65);
-}
-<!--accessibility-->
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
 .cta-button {
     display: inline-flex;
     align-items: center;
@@ -202,6 +136,7 @@ body{
     background: linear-gradient(120deg, rgba(189, 171, 229, 0.82), rgba(164, 188, 240, 0.9));
     color: rgba(27, 31, 59, 0.95);
 }
+
 .info-grid {
     display: grid;
     gap: 1.75rem;
@@ -232,6 +167,46 @@ body{
     color: var(--color-muted);
 }
 
+.booking-footer {
+    margin-top: auto;
+    padding: 2.5rem clamp(2rem, 6vw, 5rem);
+    background: rgba(17, 9, 36, 0.6);
+    color: #f4f5ff;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: grid;
+    gap: 1.5rem;
+}
+
+.footer-contact h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.footer-contact p {
+    margin: 0.25rem 0;
+    color: rgba(244, 245, 255, 0.78);
+}
+
+.footer-copy {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(244, 245, 255, 0.65);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .booking-dialog {
     border: none;
     padding: 0;
@@ -239,6 +214,7 @@ body{
     width: min(820px, 90vw);
     max-height: 90vh;
 }
+
 .booking-dialog::backdrop {
     background: rgba(27, 31, 59, 0.45);
 }
@@ -293,3 +269,211 @@ body{
     box-shadow: 0 20px 50px -45px rgba(27, 31, 59, 0.6);
 }
 
+.ticket-type select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(164, 188, 240, 0.5);
+    border-radius: var(--radius-small);
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: border var(--transition), box-shadow var(--transition);
+}
+
+.ticket-type select:focus {
+    outline: none;
+    border-color: rgba(164, 188, 240, 0.95);
+    box-shadow: 0 0 0 3px rgba(164, 188, 240, 0.25);
+}
+
+.ticket-summary {
+    display: grid;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: rgba(27, 31, 59, 0.78);
+}
+
+.ticket-summary p {
+    margin: 0;
+}
+
+.summary-total {
+    font-size: 1.05rem;
+    color: rgba(27, 31, 59, 0.9);
+}
+
+.ticket-card {
+    border-radius: var(--radius-medium);
+    padding: 1.4rem;
+    background: linear-gradient(140deg, rgba(164, 188, 240, 0.35), rgba(247, 197, 242, 0.4));
+    color: rgba(27, 31, 59, 0.9);
+    display: grid;
+    gap: 0.45rem;
+}
+
+.ticket-card__title {
+    font-weight: 700;
+    margin: 0;
+}
+
+.ticket-card__subtitle,
+.ticket-card__note {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(27, 31, 59, 0.7);
+}
+
+.ticket-card__header {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.ticket-card__event {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ticket-card__date {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(27, 31, 59, 0.65);
+}
+
+.ticket-card__body {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(27, 31, 59, 0.75);
+}
+
+.ticket-wheel {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ticket-wheel__items {
+    position: relative;
+    width: clamp(220px, 40vw, 280px);
+    height: clamp(220px, 40vw, 280px);
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.ticket-wheel__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    background: rgba(189, 171, 229, 0.35);
+    color: rgba(27, 31, 59, 0.68);
+    transition: transform var(--transition), background var(--transition), color var(--transition), box-shadow var(--transition);
+    cursor: pointer;
+    box-shadow: 0 12px 25px -20px rgba(27, 31, 59, 0.55);
+}
+
+.ticket-wheel__item.is-active {
+    background: linear-gradient(130deg, rgba(189, 171, 229, 0.9), rgba(164, 188, 240, 0.95));
+    color: rgba(27, 31, 59, 0.95);
+    transform: translate(-50%, -50%) scale(1.12);
+    box-shadow: 0 25px 40px -25px rgba(27, 31, 59, 0.5);
+}
+
+.wheel-control {
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(27, 31, 59, 0.12);
+    color: rgba(27, 31, 59, 0.75);
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.wheel-control:hover,
+.wheel-control:focus-visible {
+    background: rgba(189, 171, 229, 0.45);
+    transform: scale(1.05);
+}
+
+.customer-details label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+input[type='email'] {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-small);
+    border: 1px solid rgba(164, 188, 240, 0.5);
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+    transition: border var(--transition), box-shadow var(--transition);
+}
+
+input[type='email']:focus {
+    outline: none;
+    border-color: rgba(164, 188, 240, 0.95);
+    box-shadow: 0 0 0 3px rgba(164, 188, 240, 0.25);
+}
+
+.form-error {
+    color: #c0392b;
+    margin-top: 0.75rem;
+    min-height: 1.2rem;
+}
+
+.form-info {
+    margin: 0.75rem 0 0;
+    font-size: 0.95rem;
+    color: rgba(27, 31, 59, 0.75);
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(27, 31, 59, 0.45);
+    backdrop-filter: blur(6px);
+    z-index: 20;
+}
+
+@media (max-width: 900px) {
+    .booking-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .booking-nav {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+    .booking-main {
+        padding: 0 1.5rem 3.5rem;
+    }
+    .booking-hero {
+        padding: 2rem;
+    }
+    .booking-dialog__body section {
+        padding: 1.2rem;
+    }
+    .ticket-wheel {
+        grid-template-columns: 1fr;
+    }
+    .wheel-control {
+        justify-self: center;
+    }
+}

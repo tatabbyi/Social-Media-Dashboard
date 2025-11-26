@@ -2,18 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>tbd</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TommrowLand</title>
         <link rel="stylesheet" href="../CSS/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body class="booking-page"> <!-- frame main site-->
       <div class="page-wrapper"> <!-- navigation-->
-          <header class = "booking-header">
-          <div class="logo-mark" aria-hidden="true">TommrowLand</div><!-- aria-hidden improves assistive technology-->
+           <header class = "booking-header">
+           <div class="logo-mark" aria-hidden="true">TommrowLand</div><!-- aria-hidden improves assistive technology-->
     <nav class="booking-nav" aria-label="Festival navigation"> <!-- names element for accesibility-->
-      <a href="diana.html">Main Page</a>  
+      <a href="diana.html">Main Page</a>
       <a href="megan.html">Learn More</a>
       <a href="lizzie.html">Shop</a>
       <a href="booking.html" aria-current="page">Booking</a>
@@ -25,7 +25,7 @@
           <p class="eyebrow">TommrowLand • 17-19 june (fix)</p>
           <h1>Reserve your place</h1>
           <p class="lead">
-              Discover all ticket options to experience the best of TommrowLand.
+               Discover all ticket options to experience the best of TommrowLand.
           </p>
           <button class="cta-button" id="open-booking">Book Your Tickets</button>
         </div>
@@ -43,19 +43,19 @@
         <article class="info-card">
           <h2>Attendance Essentials</h2>
           <ul>
-            <li></li>
-            <li></li><!-- add essentials -->
-            <li></li>
-            <li></li>
+            <li>Bring photo ID, Passport or In-date Driving License.</li>
+            <li>Bag checks apply; see full list of permitted items.</li>
+            <li>Must be 18 years or older to attend.</li>
+            <li>Accessibility support must be made in advance.</li>
           </ul>
         </article>
         <article class="info-card">
           <h2>Cancellation Policy</h2>
           <ul>
-            <li></li>
-            <li></li><!-- add details -->
-            <li></li>
-            <li></li>
+            <li>Full refunds available within 14 days of purchase.</li>
+            <li>50% refund available up to 30 days before the event.</li>
+            <li>Tickets are transferable; update attendee details up to 72 hours prior.</li>
+            <li>No refunds after 30 days or on event day.</li>
           </ul>
     </main>
     <!-- footer we all need to use/change-->
@@ -68,13 +68,13 @@
       </div>
       <p class = "footer-copy">&copy; 2026 TomorrowLand. All rights reserved.</p>
     </footer>
-  </div>
+  </dialog>
   <dialog id="booking-dialog" class="booking-dialog" aria-labelledby="booking-dialog-title">
     <form method="dialog" class="booking-dialog__shell">
       <header class="booking-dialog__header">
         <h2 id="booking-dialog-title">Complete your booking</h2>
          <button type="button" class="dialog-close" aria-label="Close booking Window">&times;</button>
-      </header><!-- ticket wheel idea I dont know if i can complete this in time but im gonna try it-->
+      </header><!-- ticket wheel works!-->
       <div class="booking-dialog__body">
         <section class="ticket-wheel-section">
           <h3>Choose Ticket Quantity</h3>
@@ -137,7 +137,7 @@
           </section>
         </div>
       </form>
-    </dialog>
+    </div>
      <div class="backdrop" hidden></div>
      <script src="../Js/booking.js" defer></script>
     </body>
