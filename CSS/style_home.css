@@ -24,13 +24,16 @@
 
 /* bubble for the text */
 .bubble-card {
-    background-image: url('../HTML/Images/back_main.jpg');
+    background: var(--gradient-hero);
+    color: rgba(27, 31, 59, 0.95);
     border-radius: var(--radius-large);
-    padding: 3rem 3.5rem;          /* BIGGER bubble */
-    box-shadow: var(--shadow-soft);
-    backdrop-filter: blur(12px);
-    max-width: 1000px;             /* WIDER bubble */
-    margin: 0 auto;
+    padding: clamp(2.75rem, 8vw, 4.5rem);
+    box-shadow: var(--shadow-floating);
+    position: relative;
+    overflow: hidden;
+    margin: 0 clamp(2rem, 6vw, 5rem) 3.5rem;
+    width: auto;
+    height: 490px;
     text-align: center;
 }
 
@@ -61,6 +64,21 @@
 
 }
 
+
+/* bubble for images */
+.bubble-im {
+    background: var(--gradient-hero);
+    color: rgba(27, 31, 59, 0.95);
+    border-radius: var(--radius-large);
+    padding: clamp(2.75rem, 8vw, 4.5rem);
+    box-shadow: var(--shadow-floating);
+    position: relative;
+    overflow: hidden;
+    margin: 0 clamp(2rem, 6vw, 5rem) 3.5rem;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
 
 
 /* Logo */
@@ -139,6 +157,7 @@
 
 /* Image Gallery */
 .gallery-container {
+    background-color: hsl(0, 0%, 100%);
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -179,3 +198,23 @@
         0 6px 12px rgba(0, 0, 0, 0.45); 
 }
 
+
+/* Learn Button */
+.learn-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #2c3258eb;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.learn-more-btn:hover {
+    background-color: #2c3258eb;
+    transform: translateY(-5px);      /* moves the button up */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); /* bigger shadow */
+}
