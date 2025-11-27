@@ -36,10 +36,10 @@ Tomorrowland is a large-scale annual electronic dance music festival held in Boo
 ## Project Summary and Timeline
 
 * **30th October** – 2 hours of planning. Created design mockups and discussed ideas for the original Social Media Dashboard concept.
-* ![Mockup Designs](images/IMG_9993.jpg)
-(images/IMG_9992.jpg)
-(images/IMG_9991.jpg)
-(images/IMG_9990.jpg)
+*![Mockup 1](Images/IMG_9992.jpg)
+![Mockup 2](Images/IMG_9991.jpg)
+![Mockup 3](Images/IMG_9990.jpg)
+
 
 * **3rd November** – Library meetup (5–7 PM). Set up GitHub for the group and changed project idea to an Event Website after further research.
 * **4th November** – Tomorrowland selected as the event theme.
