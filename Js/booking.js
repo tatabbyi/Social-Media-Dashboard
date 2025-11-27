@@ -1,3 +1,4 @@
+//note click on book your tickets a few times, not sure why it works that way
 (() => {
     const openBookingButton = document.getElementById('open-booking');
     const bookingDialog = document.getElementById('booking-dialog');

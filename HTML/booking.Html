@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>tbd</title>
+        <title>TommrowLand</title>
         <link rel="stylesheet" href="../CSS/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body class="booking-page"> <!-- frame main site-->
+      <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
       <div class="page-wrapper"> <!-- navigation-->
-           <header class = "booking-header">
+           <header class = "booking-header" role="banner">
            <div class="logo-mark" aria-hidden="true">TommrowLand</div><!-- aria-hidden improves assistive technology-->
     <nav class="booking-nav" aria-label="Festival navigation"> <!-- names element for accesibility-->
       <a href="diana.html">Main Page</a>
@@ -19,7 +20,7 @@
       <a href="booking.html" aria-current="page">Booking</a>
     </nav>
   </header>
-    <main class="booking-main">
+    <main class="booking-main" role="main" id="main-content">
       <section class="booking-hero"><!-- A hero refers to a websites top sectionthat uses a prominent button-->
         <div class="booking-hero_content">
           <p class="eyebrow">TommrowLand • 17-19 june (fix)</p>
@@ -57,14 +58,22 @@
             <li>Tickets are transferable; update attendee details up to 72 hours prior.</li>
             <li>No refunds after 30 days or on event day.</li>
           </ul>
-    </main>
+        </section>
+
+        <section class="camping-addon">
+          <img src="Images/km1-hurricane-festival.jpg" alt="Camping Add-on at Hurricane Festival">
+          <div class="camping-overlay">
+            <h2>Camping Add-on</h2>
+          </div>
+        </section>
+      </main>
     <!-- footer we all need to use/change-->
-    <footer class="booking-footer">
+    <footer class="booking-footer" role="contentinfo">
       <div class="footer-contact">
         <h2>Contact Us</h2>
         <p>Phone: +32 123 456 789</p>
         <p>Email: hello@tomorrowland.com</p>
-        <p>Address: 123 Festival Way, Boom, Belgium</p>
+        <p>Address: October Festival , Boom, Belgium</p>
       </div>
       <p class = "footer-copy">&copy; 2026 TomorrowLand. All rights reserved.</p>
     </footer>
@@ -101,10 +110,10 @@
             <h3>Ticket Type</h3>
             <label for="ticket-type" class="sr-only">Select Type</label>
             <select id="ticket-type" name="ticket-type">
-              <option value="tbd" data-price="00"> tbd - €00.00</option>
-              <option value="tbd" data-price="00"> tbd - €00.00</option>
-              <option value="tbd" data-price="00"> tbd - €00.00</option>
-              <option value="tbd" data-price="00"> tbd - €00.00</option>
+              <option value="tbd" data-price="00"> Day-Pass - €75.00</option>
+              <option value="tbd" data-price="00"> Weekend-Pass - €200.00</option>
+              <option value="tbd" data-price="00"> Full-Madness-Pass - €500.00</option>
+              <option value="tbd" data-price="00"> Camping-Pass - €50.00</option>
             </select>
           </section>
           <section class="ticket-summary">
@@ -115,14 +124,15 @@
           <section class="customer-details">
             <h3>Recieve Your Ticket</h3>
             <label for="booking-email">Email address</label>
-            <input type="email" id="booking-email" name="email" placeholder="you@example.com" required autocomplete="email">
+            <input type="email" id="booking-email" name="email" placeholder="you@example.com" required autocomplete="email" aria-describedby="email-help">
+            <span id="email-help" class="sr-only">We'll send a checkout link to this email.</span>
           </section>
           <section class="ticket-preview">
             <h3>Ticket preview</h3>
             <div class="ticket-card">
               <div class="ticket-card__header">
                 <p class="ticket-card__event">TomorrowLand 2026</p>
-                <p class="ticket-card__date">17–20 June 2026 • Brussels, Belgium</p>
+                <p class="ticket-card__date">10–12 October 2026 • Boom, Belgium</p>
               </div>
               <div class="ticket-card__body">
                 <p>Preview for <span id="preview-ticket-type">tbd ticket type</span> will appear here once complete.</p>
