@@ -275,6 +275,10 @@ body {
     max-height: 90vh;
 }
 
+.booking-dialog::-webkit-scrollbar {
+    display: none;
+}
+
 .booking-dialog::backdrop {
     background: rgba(27, 31, 59, 0.45);
 }
