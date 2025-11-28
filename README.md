@@ -49,6 +49,7 @@ Tomorrowland is a large-scale annual electronic dance music festival held in Boo
 * **11th November** – Group meeting to plan content for each page. Assigned tasks such as adding images, videos, tables, and lists.
 * **18th November** – Meetup to discuss functionality of website. Worked on issues together
 * **24th November** - Fixed Problems and worked together on further implementation.
+* **28th November** - All bugs fixed and Formatted correctly.
 
 ---
 
