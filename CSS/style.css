@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/*custom variables use instead like this, background-color: var(--primary) */
 :root {
     --primary: #8da2cf;
     --accent: #bdabe5;
@@ -172,7 +173,7 @@ body {
     background: linear-gradient(120deg, rgba(189, 171, 229, 0.82), rgba(164, 188, 240, 0.9));
     color: rgba(27, 31, 59, 0.95);
 }
-
+/*sections */
 .info-grid {
     display: grid;
     gap: 1.75rem;
@@ -518,7 +519,7 @@ input[type='email']:focus {
     font-size: 0.95rem;
     color: rgba(27, 31, 59, 0.75);
 }
-
+/*Accessibility */
 .sr-only {
     position: absolute;
     width: 1px;

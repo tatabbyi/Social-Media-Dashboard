@@ -1,4 +1,4 @@
-//note click on book your tickets a few times, not sure why it works that way
+//note click on book your tickets a few times, not sure why it works that way it has to jiggle first
 (() => {
     const openBookingButton = document.getElementById('open-booking');
     const bookingDialog = document.getElementById('booking-dialog');
@@ -35,7 +35,7 @@
             bookingDialog.removeAttribute('open');
         }
     }
-
+//event listeners for dialog open/close
     if (openBookingButton) {
         openBookingButton.addEventListener('click', openDialog);
     }
@@ -58,6 +58,7 @@
             updateSummary();
         });
     }
+    //ticket data
     const ticketTypes = {
         'Day-Pass': { label: 'Day Pass', price: 75 },
         'Weekend-Pass': { label: 'Weekend Pass', price: 200 },
@@ -76,7 +77,7 @@
         const parsed = parseInt(quantityText ? quantityText : '1', 10);
         return isNaN(parsed) ? 1 : parsed;
     }
-
+//update summary display
     function updateSummary() {
         const ticketConfig = resolveTicketType(activeTicketType);
         const quantity = parseQuantity();
@@ -91,7 +92,7 @@
             totalDisplay.textContent = '€' + total.toLocaleString('en-GB');
         }
     }
-
+//wheel positioning and interaction
     function positionWheelItems() {
         if (!wheel) return;
         const radius = wheel.offsetWidth / 2 - 45;
