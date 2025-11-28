@@ -238,6 +238,20 @@ body {
     margin: 0;
 }
 
+.camping-description {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0.5rem 0 0;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.camping-addon:hover .camping-description {
+    opacity: 1;
+}
+
 .booking-footer {
     position: static !important;
     margin-top: auto !important;
