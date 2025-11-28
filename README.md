@@ -52,5 +52,11 @@ Tomorrowland is a large-scale annual electronic dance music festival held in Boo
 
 ---
 
+## Errors and Bugs During The Work
+* **Wrong size of button** – Due to the different styles on each buttons on the main page, during the work few of them moved and varied in size. 
+![Bug 1](HTMtL/Images/bug1.png)
+* **Unfixed Timeline** - Design of Timeline was changed because of changed from vertical to horizontal due to major problems with style and visuals. The idea to create a timeline came at the end of the project, so there was not enough time and skills to create the first design.
+![Bug 2](HTMtL/Images/bug2.png)
+![Bug 3](HTMtL/Images/bug3.png)
 
   
